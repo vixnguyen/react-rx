@@ -1,0 +1,70 @@
+{
+  "name": "react-rx",
+  "version": "0.0.1",
+  "description": "State management wthout redux",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "start": "concurrently --kill-others \"npm run copy\" \"npm run serve\"",
+    "serve": "webpack-dev-server --mode development",
+    "build": "npm run copy && webpack --mode production",
+    "copy": "babel src --out-dir lib --extensions '.ts' --watch",
+    "deploy": "npm run build && gh-pages -d example/dist",
+    "prepublish": "npm run clean && npm run copy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vixnguyen/react-rx.git"
+  },
+  "keywords": [
+    "react",
+    "state management",
+    "no redux"
+  ],
+  "bugs": {
+    "url": "https://github.com/vixnguyen/react-rx/issues"
+  },
+  "homepage": "https://github.com/vixnguyen/react-rx#readme",
+  "peerDependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "dependencies": {
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "concurrently": "^6.3.0",
+    "crawler": "^1.3.0",
+    "css-loader": "^3.6.0",
+    "gh-pages": "^2.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "author": "Vix Nguyen <vinguyen.fitsgu@gmail.com>",
+  "license": "ISC"
+}

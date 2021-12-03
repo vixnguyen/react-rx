@@ -1,0 +1,14 @@
+* {
+  font-family: Helvetica;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card.border-primary > .card-header{
+  background-color: #0d6efd;
+  color: #FFF;
+}
