@@ -13,7 +13,7 @@ const Header = () => {
       <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/" className="d-flex text-dark text-decoration-none">
           <img src={Logo} alt="React Rx" width="32" />
-          <span className="fs-4">&nbsp;React Rx</span>
+          <span className="fs-4">&nbsp;ReactRx</span>
         </a>
       </header>
     </div>

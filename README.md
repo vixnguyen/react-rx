@@ -1,13 +1,19 @@
-# React Rx
+# ReactRx
 
-This package is used for React state management, it is not intended to become an alternative usage of Redux. Just provide the other option of managing global state within React app. If you're looking for the simple, flexible, effective way to manage you app state, this package is for you. You're new in React/Redux, you're facing confuses in working with alot of concepts of Redux such as reducer, action, middleware and how it works, this package is for you.
+[Demo here](https://vixnguyen.github.io/react-rx)
+
+
+This package is used for state management in React, it is not intended to become an alternative of Redux. It's just an different approach to state management.
+
+
+If you're looking for the simple, flexible, effective way to manage global state of your React application, this package is for you. If you're new in Redux, you're confused with a lot of its concepts such as store, reducer, action, middleware, alright, go ahead with ReactRx.
+
+
 Let's take a look the detail as below:
-
-<!-- [Demo here](https://vixnguyen.github.io/timezone-select) -->
 
 ### There are excellent benefits:
 - Lightweight
-- Easy to use
+- Easy to use (select state by key string)
 - Simple of architecture
 - Can use any where in your react application, not only in component
 
@@ -17,32 +23,12 @@ npm i react-rx
 ```
 
 ## Built-in
-### Methods
 ##### `MasterStore`  
-- Basically, return client timezone `America/New_York`  
-- If it's a deprecated timezone, return linked timezone instead, for example if client timezone is `Japan` it will return `Asia/Tokyo`.
+- For registering a store, the same concept as `createStore` in Redux
 ##### `useSubscriber`  
-Return raw timezone item
-```js
-{
-  country: '',
-  name: 'Singapore',
-  status: 'Deprecated',
-  offset: '+08:00',
-  link: 'Asia/Singapore'
-}
-```
+- For watching state, the same concept as `useSelector` in React Hooks + Redux
 ##### `useEmitter`  
-Return grouped timezone item
-```js
-{
-  value: 'Asia/Singapore'
-  label: '(GMT+08:00) Singapore'
-  country: 'SG'
-  offset: '+08:00'
-  included: 'Asia/Singapore, Singapore'
-}
-```
+- For doing action, updating state, the same concept as `useDispatch` in React Hooks + Redux
 
 ## Usage 
 ### Register
@@ -62,7 +48,7 @@ ReactDOM.render(<App />, rootElement)
 ```
 
 ### Watch state
-##### Master store (Root state)
+#### Root (Master store)
 ```jsx
 import React from 'react';
 import { useSubsriber } from 'react-rx';
@@ -74,7 +60,7 @@ const App = () => {
 };
 ```
 
-##### Children
+#### Children
 ```jsx
 import React from 'react';
 import { useSubsriber } from 'react-rx';
@@ -87,7 +73,7 @@ const LoadingIndicator = () => {
 ```
 
 ### Update state
-##### Inside component
+#### Inside component
 ```jsx
 import React from 'react';
 import { useSubsriber } from 'react-rx';
@@ -109,7 +95,7 @@ const PostReaction = (post) => {
   )
 }
 ```
-##### Outside component (Either Service, utils or othes)
+#### Outside component (Either Service, utils or othes)
 ```ts
 import { useEmitter } from 'react-rx';
 
@@ -129,6 +115,9 @@ class PostService {
   }
 }
 ```
+
+### Note
+ReactRx
 
 ## Contributing
 

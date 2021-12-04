@@ -27,6 +27,9 @@
 .btn-info {
   color: #FFF;
 }
+.btn-info:disabled {
+  color: #FFF;
+}
 .btn-info:hover {
   background-color: #61DAFB;
   color: #FFF;
