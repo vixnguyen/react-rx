@@ -9,20 +9,20 @@ class PageService {
     // dummy data
     const data = [
       {
-        name: 'Redux Hooks',
+        name: 'React Rx',
         isLiked: false,
         isFeatured: false
       },
       {
-        name: 'React Rx',
+        name: 'The new React state management since 2021',
         isLiked: false,
         isFeatured: true
       },
-      // {
-      //   name: 'Recoil',
-      //   isLiked: false,
-      //   isFeatured: false
-      // }
+      {
+        name: 'Redux\'s competitor',
+        isLiked: false,
+        isFeatured: true
+      }
     ];
 
     // set loading

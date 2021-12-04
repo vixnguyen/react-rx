@@ -1,112 +1,20 @@
 import React from 'react';
 
-
-const ReduxContent = () => {
-  return (
-    <ul className="list-unstyled mt-3 mb-4">
-      <li>
-        <h5>Initialize global state</h5>
-        <div>
-          {/* <p>Master Store</p> */}
-          <pre className="code">
-            const store = createStore(reducer);
-            <br />
-            {
-              `<Provider store={store}>...</Provider>`
-            }
-          </pre>
-        </div>
-      </li>
-      <li>
-        <h5>Selection</h5>
-        <div>
-          {/* <p>Root state</p> */}
-          <pre className="code">
-            useSelector()
-          </pre>
-        {/* </div>
-        <div> */}
-          <p>For child</p>
-          <pre className="code">
-            useSelector(() => rootState.dependence?.child)
-          </pre>
-        </div>
-      </li>
-      <li>
-        <h5>Action</h5>
-        <div>
-          <pre className="code">
-            useDispatch(data)
-          </pre>
-          <p>Others (Service, Util)</p>
-          <pre className="code">
-            N/A
-          </pre>
-        </div>
-      </li>
-    </ul>
-  )
-}
-
-const ReactRxContent = () => {
-  return (
-    <ul className="list-unstyled mt-3 mb-4">
-      <li>
-        <h5>Initialize global state</h5>
-        <div>
-          {/* <p>Master Store</p> */}
-          <pre className="code">
-            new MasterStore(state)
-          </pre>
-        </div>
-      </li>
-      <li>
-        <h5>Selection</h5>
-        <div>
-          {/* <p>Master Store</p> */}
-          <pre className="code">
-            useSubscriber()
-          </pre>
-        {/* </div>
-        <div> */}
-          <p>For Child</p>
-          <pre className="code">
-          useSubscriber('dependence.child')
-          </pre>
-        </div>
-      </li>
-      <li>
-        <h5>Action</h5>
-        <div>
-          <pre className="code">
-            useEmitter(data)
-          </pre>
-          <p>Others (Service, Util)</p>
-          <pre className="code">
-            useEmitter(data)
-          </pre>
-        </div>
-      </li>
-    </ul>
-  )
-}
-
 const Item = ({ data }) => {
 
   const additionalClassName = data.isFeatured ? 'border-primary' : '';
 
   return (
-    <div className="col">
-      <div className={ `card mb-4 rounded-3 shadow-sm ${additionalClassName}` }>
-        <div className="card-header py-3">
-          <h4 className="my-0 fw-normal">{data.name}</h4>
-        </div>
-        <div className="card-body">
-          {/* <h1 className="card-title">$29<small className="text-muted fw-light">/mo</small></h1> */}
-          { data.isFeatured ? <ReactRxContent /> : <ReduxContent /> }
-          {/* <button className="w-100 btn btn-lg btn-light">Like</button> */}
-        </div>
+    <div className="feature col">
+      <div className="feature-icon bg-primary bg-gradient">
+        <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection"></use></svg>
       </div>
+      <h4>{data.name}</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nunc erat, condimentum eget ullamcorper ut, venenatis a massa. Vivamus tristique dui purus, quis imperdiet eros placerat eu.</p>
+      <a href="#" className="icon-link">
+        Read
+        <svg className="bi" width="1em" height="1em"><use xlinkHref="#chevron-right"></use></svg>
+      </a>
     </div>
   )
 }
