@@ -7,9 +7,9 @@ const Loader = () => {
   const { isLoading } = useSubscriber('page');
 
   return (
-    isLoading && <div class="d-flex justify-content-center">
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
+    isLoading && <div className="d-flex justify-content-center">
+      <div className="spinner-border text-info" role="status">
+        <span className="visually-hidden">Loading...</span>
       </div>
   </div>
   )

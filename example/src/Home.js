@@ -6,8 +6,8 @@ import { Loader } from './Loader';
 
 const LoginButton = () => {
   return ( 
-    <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Please login to see your News Feed
+    <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Please login to see News Feed
     </button>
   );
 }

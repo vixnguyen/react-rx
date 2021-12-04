@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    index: './example/src/index.js'
+    index: './example/src/App.js'
   },
   output: {
     path: path.join(__dirname, './example/dist'),
@@ -15,6 +15,17 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[hash]-[name].[ext]',
+            },
+          },
+        ],
+      },
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',

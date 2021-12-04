@@ -24,3 +24,10 @@
   color: #fff;
   border-radius: 0.75rem;
 }
+.btn-info {
+  color: #FFF;
+}
+.btn-info:hover {
+  background-color: #61DAFB;
+  color: #FFF;
+}

@@ -1,19 +1,16 @@
 import React from 'react';
+import Logo from '../assets/react-rx-white.svg';
 
 const Item = ({ data }) => {
-
-  const additionalClassName = data.isFeatured ? 'border-primary' : '';
-
   return (
     <div className="feature col">
-      <div className="feature-icon bg-primary bg-gradient">
-        <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection"></use></svg>
+      <div className="feature-icon bg-info bg-gradient">
+        <img src={Logo} alt="React Rx" className="bi" width="32" />
       </div>
       <h4>{data.name}</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nunc erat, condimentum eget ullamcorper ut, venenatis a massa. Vivamus tristique dui purus, quis imperdiet eros placerat eu.</p>
-      <a href="#" className="icon-link">
-        Read
-        <svg className="bi" width="1em" height="1em"><use xlinkHref="#chevron-right"></use></svg>
+      <a href="https://github.com/vixnguyen/react-rx" target="_blank" className="icon-link text-info">
+        Read &rsaquo;
       </a>
     </div>
   )

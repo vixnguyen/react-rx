@@ -39,7 +39,7 @@ const Dialog = () => {
             </div>
             <div className="modal-footer">
               <button type="button" ref={$btnClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" className="btn btn-primary" disabled={!!isLoading}>
+              <button type="submit" className="btn btn-info" disabled={!!isLoading}>
                 {
                   isLoading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 }
