@@ -41,7 +41,7 @@ const Home = () => {
     <div className="row row-cols-1 row-cols-md-1 mb-3 text-center">
       <div className="col">
         {
-          !isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
+          isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
         }
       </div>
     </div>

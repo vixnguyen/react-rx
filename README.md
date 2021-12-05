@@ -3,7 +3,7 @@
 [Demo here](https://vixnguyen.github.io/react-rx)
 
 
-This package is used for state management in React, it is not intended to become an alternative of Redux. It's just an different approach to state management.
+This package is used for state management, it is not intended to become an alternative of Redux. It's just an different approach to the state management in React.
 
 
 If you're looking for the simple, flexible, effective way to manage global state of your React application, this package is for you. If you're new in Redux, you're confused with a lot of its concepts such as store, reducer, action, middleware, alright, go ahead with ReactRx.
@@ -12,7 +12,7 @@ If you're looking for the simple, flexible, effective way to manage global state
 Let's take a look the detail as below:
 
 ## Competitive benefits:
-- Lightweight
+- Light-weight
 - Easy to use (select state by key string)
 - Simple of architecture
 - Can use any where in your react application, not only in component
@@ -115,6 +115,33 @@ class PostService {
   }
 }
 ```
+
+#### Others
+To update a state, you can specify the path of an object
+```ts
+useEmitter(val, 'level1.level2.level3.level4');
+```
+instead of
+
+```ts
+useEmitter({ 
+  level1: {
+    level2: {
+      level3: {
+        level4: val
+      }
+    }
+  }
+});
+```
+it up to you to decide.
+
+### Services
+ReactRx recommend you to use service to handle business logic of your application.
+
+If you have familiared with Redux, you can imagine that services is the same as what reducers do in Redux architecture.
+
+Please checkout the example for further detail.
 
 ## Contributing
 

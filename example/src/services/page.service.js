@@ -25,7 +25,7 @@ class PageService {
       }
     ];
 
-    // another approach to state updating
+    // another approach to updating state
     useEmitter(true, 'page.isLoading');
 
     setTimeout(() => {
