@@ -4,7 +4,7 @@ declare const window: any;
 
 class MasterStore {
   constructor(data = null) {
-    window.$masterStore = new BehaviorSubject(data);
+    window.masterStore$ = new BehaviorSubject(data);
   }
 }
 

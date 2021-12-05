@@ -34,13 +34,13 @@ const objSet = (obj, path, val) => {
 };
 
 const proceedState = (dependence, data = 'root') => {
-  const masterStore = data === 'root' ? window.$masterStore.value : data;
+  const masterStore = data === 'root' ? window.masterStore$.value : data;
   let result;
   if (typeof dependence === 'function') {
     throw new Error('Will implement soon!!!');
   } else if (typeof dependence === 'string') {
     if (dependence) {
-      const pathArr = dependence.split('.');
+      const pathArr = stringToPath(dependence);
       result = getNestedObject(masterStore, pathArr) || {};
     } else {
       result = masterStore;
@@ -69,21 +69,20 @@ const stringToPath = (path) => {
       }
     });
   });
-  console.log(output);
   return output;
 };
 
 const mergeDeep = (target, source) => {
-  let output = Object.assign({}, target);
+  let output = target;
   if (isObject(target) && isObject(source)) {
     Object.keys(source).forEach(key => {
       if (isObject(source[key])) {
         if (!(key in target))
-          Object.assign(output, { [key]: source[key] });
+          output = { ...output, ...{ [key]: source[key] } };
         else
           output[key] = mergeDeep(target[key], source[key]);
       } else {
-        Object.assign(output, { [key]: source[key] });
+        output = { ...output, ...{ [key]: source[key] } };
       }
     });
   }

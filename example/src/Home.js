@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { useSubscriber } from '../../lib';
+import { useSubscriber, useEmitter } from '../../lib';
 import { Item } from './Item';
 import PageService from './services/page.service';
 import { Loader } from './Loader';
+import { set } from 'react-hook-form';
 
 const LoginButton = () => {
   return (
@@ -14,7 +15,7 @@ const LoginButton = () => {
   );
 }
 
-const NewsFeed = ({name}) => {
+const NewsFeed = ({ name }) => {
   const { data } = useSubscriber('page');
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const Home = () => {
     <div className="row row-cols-1 row-cols-md-1 mb-3 text-center">
       <div className="col">
         {
-          isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
+          !isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
         }
       </div>
     </div>

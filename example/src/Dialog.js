@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { useSubscriber } from '../../lib';
@@ -6,8 +6,6 @@ import { useSubscriber } from '../../lib';
 import UserService from './services/user.service';
 
 const Dialog = () => {
-
-  console.log('rerender');
 
   const { isLoading } = useSubscriber('page');
   const userService = useRef(new UserService());

@@ -3,15 +3,21 @@ import { proceedState } from './utils';
 
 declare const window: any;
 
-export default function useSubscriber(dependence = '') {
+const useSubscriber = (dependence = '') => {
 
   const [val, setVal] = useState(proceedState(dependence));
 
   useEffect(() => {
-    window.$masterStore.subscribe({
-      next: (v) => setVal(proceedState(dependence, v))
+    window.masterStore$.subscribe({
+      next: (v) => {
+        return setVal((prevState) => {
+          return { ...prevState, ...proceedState(dependence, v) }
+        });
+      }
     });
   }, [dependence]);
 
   return val;
-}
+};
+
+export default useSubscriber;

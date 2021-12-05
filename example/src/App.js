@@ -25,7 +25,19 @@ new MasterStore({
     isLoading: false,
     hasError: false,
     msg: null,
-    data: null
+    data: null,
+    posts: [
+      {
+        name: 'React Rx',
+        isLiked: false,
+        isFeatured: false
+      },
+      {
+        name: 'The new React state management since 2021',
+        isLiked: false,
+        isFeatured: true
+      }
+    ]
   },
   user: {
     isAuthenticated: false
