@@ -19,18 +19,14 @@ class PageService {
         isFeatured: true
       },
       {
-        name: 'Redux\'s competitor',
+        name: 'One Redux\'s competitor',
         isLiked: false,
         isFeatured: true
       }
     ];
 
-    // set loading
-    useEmitter({
-      page: {
-        isLoading: true
-      }
-    });
+    // another approach to state updating
+    useEmitter(true, 'page.isLoading');
 
     setTimeout(() => {
       useEmitter({

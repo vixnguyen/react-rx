@@ -28,7 +28,7 @@ const Dialog = () => {
         <div className="modal-content">
           <form className="form" onSubmit={handleSubmit(doLogin)}>
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Login</h5>
+              <h5 className="modal-title" id="exampleModalLabel">Please Sign In</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -43,7 +43,7 @@ const Dialog = () => {
                 {
                   isLoading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 }
-                &nbsp;Login
+                &nbsp;Sign in
               </button>
             </div>
           </form>

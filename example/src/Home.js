@@ -5,15 +5,16 @@ import PageService from './services/page.service';
 import { Loader } from './Loader';
 
 const LoginButton = () => {
-  return ( 
-    <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Please login to see News Feed
-    </button>
+  return (
+    <>
+      <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Sign in to see News Feed
+      </button>
+    </>
   );
 }
 
 const NewsFeed = ({name}) => {
-
   const { data } = useSubscriber('page');
 
   useEffect(() => {
@@ -40,7 +41,7 @@ const Home = () => {
     <div className="row row-cols-1 row-cols-md-1 mb-3 text-center">
       <div className="col">
         {
-          isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
+          !isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
         }
       </div>
     </div>

@@ -11,7 +11,7 @@ If you're looking for the simple, flexible, effective way to manage global state
 
 Let's take a look the detail as below:
 
-### There are excellent benefits:
+## Competitive benefits:
 - Lightweight
 - Easy to use (select state by key string)
 - Simple of architecture
@@ -115,9 +115,6 @@ class PostService {
   }
 }
 ```
-
-### Note
-ReactRx
 
 ## Contributing
 
