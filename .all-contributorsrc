@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vixnguyen",
+      "name": "Vix Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19356181?v=4",
+      "profile": "https://www.facebook.com/onfocus.vi",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-rx",
+  "projectOwner": "vixnguyen",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
