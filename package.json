@@ -9,10 +9,11 @@
   ],
   "scripts": {
     "clean": "rimraf lib",
-    "start": "concurrently --kill-others \"npm run copy\" \"npm run serve\"",
+    "start": "concurrently --kill-others \"npm run copy.dev\" \"npm run serve\"",
     "serve": "webpack-dev-server --mode development",
     "build": "npm run copy && webpack --mode production",
-    "copy": "babel src --out-dir lib --extensions '.ts' --watch",
+    "copy": "babel src --out-dir lib --extensions '.ts'",
+    "copy.dev": "babel src --out-dir lib --extensions '.ts' --watch",
     "deploy": "npm run build && gh-pages -d example/dist",
     "prepublish": "npm run clean && npm run copy",
     "test": "echo \"Error: no test specified\" && exit 1"
