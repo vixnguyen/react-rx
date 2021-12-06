@@ -14,7 +14,7 @@ class PageService {
         isFeatured: false
       },
       {
-        name: 'The new React state management since 2021',
+        name: 'The new React state management',
         isLiked: false,
         isFeatured: true
       },

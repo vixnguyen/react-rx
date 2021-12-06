@@ -3,32 +3,31 @@ import { useSubscriber, useEmitter } from '../../lib';
 import { Item } from './Item';
 import PageService from './services/page.service';
 import { Loader } from './Loader';
-import { set } from 'react-hook-form';
 
-const LoginButton = () => {
+const NoContent = () => {
   return (
     <>
-      <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Sign in to see News Feed
-      </button>
+      <h2>Please sign in</h2>
     </>
   );
 }
 
 const NewsFeed = ({ name }) => {
-  const { data } = useSubscriber('page');
+  const data = useSubscriber('page.data');
 
   useEffect(() => {
-    new PageService().getData();
-  }, []);
+    if (!data) {
+      new PageService().getData();
+    }
+  }, [data]);
 
   return (
     <>
-      <h2 className="mb-5">Hi {name},</h2>
+      {/* <h2 className="mb-5">News Feed</h2> */}
       <Loader />
       <div className="row row-cols-1 row-cols-md-3 mb-3 text-start">
         {
-          data && data.map((item, key) => <Item key={key} data={item} />)
+          data && data.length && data.map((item, key) => <Item key={key} data={item} />)
         }
       </div>
     </>
@@ -42,7 +41,7 @@ const Home = () => {
     <div className="row row-cols-1 row-cols-md-1 mb-3 text-center">
       <div className="col">
         {
-          !isAuthenticated ? <NewsFeed name={ name } /> : <LoginButton />
+          isAuthenticated ? <NewsFeed name={ name } /> : <NoContent />
         }
       </div>
     </div>

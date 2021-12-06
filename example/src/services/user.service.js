@@ -12,7 +12,7 @@ class UserService {
     await this.fakeAsyncRequest();
 
     if (user && !user.name) {
-      user.name = 'Anonymous';
+      user.name = 'React Rxer';
     }
 
     user.isAuthenticated = true;

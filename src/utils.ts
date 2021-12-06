@@ -12,13 +12,13 @@ const getNestedObject = (object, pathArr) => {
 }
 
 const objSet = (obj, path, val) => {
-	path = stringToPath(path);
+  path = stringToPath(path);
 	const length = path.length;
 	let current = obj;
 
 	path.forEach((key, index) => {
 		if (index === length -1) { 
-      if (typeof current[key] === 'object' && typeof val === 'object') {
+      if (typeof current[key] === 'object' && typeof val === 'object' && !isEmpty(val) && val !== null) {
         current[key] = mergeDeep(current[key], val);
       } else {
         current[key] = val;
@@ -41,7 +41,7 @@ const proceedState = (dependence, data = 'root') => {
   } else if (typeof dependence === 'string') {
     if (dependence) {
       const pathArr = stringToPath(dependence);
-      result = getNestedObject(masterStore, pathArr) || {};
+      result = getNestedObject(masterStore, pathArr);
     } else {
       result = masterStore;
     }
@@ -57,6 +57,19 @@ const overrideState = (masterStore, dependence, data) => {
 
 const isObject = (item) => {
   return (item && typeof item === 'object' && !Array.isArray(item));
+}
+
+const isArray = (item) => {
+  return (item && typeof item === 'object' && Array.isArray(item));
+}
+
+const isEmpty = (obj) => {
+  for(let prop in obj) {
+    if(Object.prototype.hasOwnProperty.call(obj, prop)) {
+      return false;
+    }
+  }
+  return JSON.stringify(obj) === JSON.stringify({});
 }
 
 const stringToPath = (path) => {
@@ -77,10 +90,11 @@ const mergeDeep = (target, source) => {
   if (isObject(target) && isObject(source)) {
     Object.keys(source).forEach(key => {
       if (isObject(source[key])) {
-        if (!(key in target))
+        if (!(key in target)) {
           output = { ...output, ...{ [key]: source[key] } };
-        else
+        } else {
           output[key] = mergeDeep(target[key], source[key]);
+        }
       } else {
         output = { ...output, ...{ [key]: source[key] } };
       }
@@ -89,4 +103,4 @@ const mergeDeep = (target, source) => {
   return output;
 }
 
-export { getNestedObject, proceedState, isObject, mergeDeep, overrideState }
+export { getNestedObject, proceedState, isObject, isArray, mergeDeep, overrideState }

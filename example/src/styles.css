@@ -24,7 +24,12 @@
   color: #fff;
   border-radius: 0.75rem;
 }
-/* .btn-info {
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.btn-info {
   color: #FFF;
 }
 .btn-info:disabled {
@@ -33,4 +38,4 @@
 .btn-info:hover {
   background-color: #61DAFB;
   color: #FFF;
-} */
+}

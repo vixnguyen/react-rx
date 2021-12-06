@@ -4,7 +4,7 @@ import { useSubscriber } from '../../lib';
 
 const Loader = () => {
 
-  const { isLoading } = useSubscriber('page');
+  const isLoading = useSubscriber('page.isLoading');
 
   return (
     isLoading && <div className="d-flex justify-content-center">

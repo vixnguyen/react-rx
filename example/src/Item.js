@@ -10,7 +10,7 @@ const Item = ({ data }) => {
       <h4>{data.name}</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nunc erat, condimentum eget ullamcorper ut, venenatis a massa. Vivamus tristique dui purus, quis imperdiet eros placerat eu.</p>
       <a href="https://github.com/vixnguyen/react-rx" target="_blank" className="icon-link text-info">
-        Read &rsaquo;
+        Read &raquo;
       </a>
     </div>
   )
