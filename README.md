@@ -1,7 +1,10 @@
-<img src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" data-canonical-src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" width="60" />
+
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+<img src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" data-canonical-src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" width="120" />
 
 # React Rx
 
