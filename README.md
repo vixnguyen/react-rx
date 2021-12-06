@@ -1,15 +1,16 @@
-# ReactRx
+<img src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" data-canonical-src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" width="60" />
+
+# React Rx
 
 [Demo here](https://vixnguyen.github.io/react-rx)
 
-
-This package is used for state management, it is not intended to become an alternative of Redux. It's just an different approach to the state management in React.
-
-
-If you're looking for the simple, flexible, effective way to manage global state of your React application, this package is for you. If you're new in Redux, you're confused with a lot of its concepts such as store, reducer, action, middleware, alright, go ahead with ReactRx.
+This package is used for state management, it is not intended to become an alternative to Redux. It just provides a different approach to state management in React.
 
 
-Let's take a look the detail as below:
+If you're looking for a simple, flexible, effective way to manage the global state of your React application, this package is for you. If you're new to Redux, you're confused with a lot of its concepts such as the `store`, `reducer`, `action`, `middleware` - Alright, go ahead with React Rx.
+
+
+Let's take a look at the detail below:
 
 ## Competitive benefits:
 - Light-weight
@@ -24,11 +25,11 @@ npm i react-rx
 
 ## Built-in
 ##### `MasterStore`  
-- For registering a store, the same concept as `createStore` in Redux
+- For registering a store, the same concept as `createStore` in `Redux`
 ##### `useSubscriber`  
-- For watching state, the same concept as `useSelector` in React Hooks + Redux
+- For watching state, the same concept as `useSelector` in `React Hooks + Redux`
 ##### `useEmitter`  
-- For doing action, updating state, the same concept as `useDispatch` in React Hooks + Redux
+- For doing action, updating state, the same concept as `useDispatch` in `React Hooks + Redux`
 
 ## Usage 
 ### Register
