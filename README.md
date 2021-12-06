@@ -162,7 +162,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.facebook.com/onfocus.vi"><img src="https://avatars.githubusercontent.com/u/19356181?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vix Nguyen</b></sub></a><br /><a href="#ideas-vixnguyen" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/vixnguyen/react-rx/commits?author=vixnguyen" title="Code">💻</a> <a href="#maintenance-vixnguyen" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/st-vinguyen"><img src="https://avatars.githubusercontent.com/u/62738404?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vi Nguyen H.T.</b></sub></a><br /><a href="https://github.com/vixnguyen/react-rx/commits?author=st-vinguyen" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/st-vinguyen"><img src="https://avatars.githubusercontent.com/u/62738404?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vi Nguyen H.T.</b></sub></a><br /><a href="https://github.com/vixnguyen/react-rx/commits?author=st-vinguyen" title="Code">💻</a> <a href="#maintenance-st-vinguyen" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
