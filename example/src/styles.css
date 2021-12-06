@@ -39,3 +39,14 @@
   background-color: #61DAFB;
   color: #FFF;
 }
+.text-link {
+  cursor: pointer;
+  color: #61DAFB;
+  text-decoration: underline;
+}
+.text-link:hover {
+  color: #0dcaf0;
+}
+.pr-2 {
+  padding-right: 10px;
+}

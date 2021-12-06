@@ -7,7 +7,7 @@ const Item = ({ data }) => {
       <div className="feature-icon bg-info bg-gradient">
         <img src={Logo} alt="React Rx" className="bi" width="32" />
       </div>
-      <h4>{data.name}</h4>
+      <h5>{data.name}</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nunc erat, condimentum eget ullamcorper ut, venenatis a massa. Vivamus tristique dui purus, quis imperdiet eros placerat eu.</p>
       <a href="https://github.com/vixnguyen/react-rx" target="_blank" className="icon-link text-info">
         Read &raquo;
@@ -16,4 +16,4 @@ const Item = ({ data }) => {
   )
 }
 
-export { Item };
+export default Item;

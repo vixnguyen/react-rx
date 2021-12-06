@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { useSubscriber, useEmitter } from '../../lib';
-import { Item } from './Item';
+
+import { useSubscriber } from '../../lib';
+
 import PageService from './services/page.service';
-import { Loader } from './Loader';
+import Item from './Item';
+import Loader from './Loader';
 
 const NoContent = () => {
   return (
-    <>
-      <h2>Please sign in</h2>
-    </>
+    <h5>Hi Guest! Please <span className="text-link" data-bs-toggle="modal" data-bs-target="#exampleModal">sign in</span> to continue.</h5>
   );
 }
 
@@ -23,7 +23,7 @@ const NewsFeed = ({ name }) => {
 
   return (
     <>
-      {/* <h2 className="mb-5">News Feed</h2> */}
+      {/* <h2 className="mb-5">Hi {name}</h2> */}
       <Loader />
       <div className="row row-cols-1 row-cols-md-3 mb-3 text-start">
         {
@@ -48,4 +48,4 @@ const Home = () => {
   );
 }
 
-export { Home };
+export default Home;

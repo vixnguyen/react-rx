@@ -51,4 +51,4 @@ const Dialog = () => {
   )
 }
 
-export { Dialog };
+export default Dialog;
