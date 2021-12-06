@@ -15,6 +15,15 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "st-vinguyen",
+      "name": "Vi Nguyen H.T.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62738404?v=4",
+      "profile": "https://github.com/st-vinguyen",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
