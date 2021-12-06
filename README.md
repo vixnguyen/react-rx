@@ -20,7 +20,7 @@ Let's take a look at the detail below:
 
 ## Competitive benefits:
 - Light-weight
-- Easy to use (select state by key string)
+- Easy to use
 - Simple of architecture
 - Can use any where in your react application, not only in component
 
@@ -124,6 +124,7 @@ class PostService {
 ```
 
 #### Others
+##### The usage of tring
 To update a state, you can specify the path of an object
 ```ts
 useEmitter(val, 'level1.level2.level3.level4');
@@ -141,12 +142,67 @@ useEmitter({
   }
 });
 ```
-it up to you to decide.
+Both of them works the same, choose a comfortable one base on your use-case.
+
+##### Deep merge objects
+Highly noted that, due to data integrity purpose we decided to use deep merge for updating objects, for example:
+
+_Current state_
+```ts
+{
+  level1: {
+    level21: true,
+    level22: 'xyz',
+    level23: {
+      level3: null
+    }
+  }
+}
+```
+_Update the state with new data_
+
+```ts
+useEmitter({ 
+  level1: {
+    level21: false
+  }
+});
+```
+
+_The result would be_
+```ts
+{
+  level1: {
+    level21: false, // updated with new value
+    level22: 'xyz', // not be removed
+    level23: { // not be removed
+      level3: null
+    }
+  }
+}
+```
+
+It means all attributes of an object will be persisted as initial values, unless you try to force to remove them all by setting it value to empty object `{}` or `null`
+
+_Force to remove all attributes_
+```ts
+useEmitter({ 
+  level1: {} // or null also works
+});
+```
+
+_The result would be_
+
+```ts
+{ 
+  level1: {}
+};
+```
 
 ### Services
-ReactRx recommend you to use service to handle business logic of your application.
+`React Rx` recommend you to use service to handle business logic of your application.
 
-If you have familiared with Redux, you can imagine that services is the same as what reducers do in Redux architecture.
+If you have familiared with `Redux`, you can imagine that services is the same as what `reducers` do in Redux architecture.
 
 Please checkout the example for further detail.
 
