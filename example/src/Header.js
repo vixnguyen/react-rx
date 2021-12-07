@@ -37,7 +37,7 @@ const Header = () => {
       <header>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container-fluid">
-            <a href="/" className="d-flex navbar-brand">
+            <a href="" className="d-flex navbar-brand">
               <img src={Logo} alt="React Rx" width="32" />
               <span className="fs-4">&nbsp;React Rx</span>
             </a>
