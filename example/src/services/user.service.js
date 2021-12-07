@@ -12,7 +12,7 @@ class UserService {
     await this.fakeAsyncRequest();
 
     if (user && !user.name) {
-      user.name = 'React RetiXer';
+      user.name = 'RetiXer';
     }
 
     user.isAuthenticated = true;
