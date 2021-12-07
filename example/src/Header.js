@@ -39,7 +39,7 @@ const Header = () => {
           <div className="container-fluid">
             <a href="" className="d-flex navbar-brand">
               <img src={Logo} alt="React Rx" width="32" />
-              <span className="fs-4">&nbsp;React Rx</span>
+              <span className="fs-4">&nbsp;React RetiX</span>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>

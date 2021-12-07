@@ -1,6 +1,6 @@
 {
-  "name": "react-rx",
-  "version": "0.0.1",
+  "name": "react-retix",
+  "version": "0.1.0-beta",
   "description": "State management wthout redux",
   "main": "lib/index.js",
   "files": [
@@ -24,6 +24,8 @@
   },
   "keywords": [
     "react",
+    "rx",
+    "reactivex",
     "state management",
     "no redux"
   ],
@@ -70,5 +72,9 @@
     "arrowParens": "avoid"
   },
   "author": "Vix Nguyen <vinguyen.fitsgu@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  }
 }

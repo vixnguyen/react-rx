@@ -6,7 +6,7 @@
 
 <img src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" data-canonical-src="https://github.com/vixnguyen/react-rx/blob/main/example/assets/react-rx.svg" width="112" />
 
-# React Rx
+# React RetiX
 
 [Demo here](https://vixnguyen.github.io/react-rx)
 
@@ -26,7 +26,7 @@ Let's take a look at the detail below:
 
 ## Install
 ```
-npm i react-rx
+npm i react-retix
 ```
 
 ## Built-in
@@ -41,7 +41,7 @@ npm i react-rx
 ### Register
 ```jsx
 import React, { useState } from 'react';
-import { MasterStore } from 'react-rx';
+import { MasterStore } from 'react-retix';
 
 new MasterStore({ state });
 
@@ -58,7 +58,7 @@ ReactDOM.render(<App />, rootElement)
 #### Root (Master store)
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-rx';
+import { useSubsriber } from 'react-retix';
 
 const App = () => {
   const masterStore = useSubsriber();
@@ -70,7 +70,7 @@ const App = () => {
 #### Children
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-rx';
+import { useSubsriber } from 'react-retix';
 
 const LoadingIndicator = () => {
   const isLoading = useSubsriber('page.isLoading');
@@ -83,7 +83,7 @@ const LoadingIndicator = () => {
 #### Inside component
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-rx';
+import { useSubsriber } from 'react-retix';
 
 const PostReaction = (post) => {
 
@@ -104,7 +104,7 @@ const PostReaction = (post) => {
 ```
 #### Outside component (Either Service, utils or othes)
 ```ts
-import { useEmitter } from 'react-rx';
+import { useEmitter } from 'react-retix';
 
 class PostService {
   constructor () {
@@ -200,7 +200,7 @@ _The result would be_
 ```
 
 ### Services
-`React Rx` recommend you to use service to handle business logic of your application.
+`React RetiX` recommend you to use service to handle business logic of your application.
 
 If you have familiared with `Redux`, you can imagine that services is the same as what `reducers` do in Redux architecture.
 
