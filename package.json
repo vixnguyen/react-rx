@@ -1,7 +1,7 @@
 {
   "name": "react-retix",
-  "version": "0.1.0-beta",
-  "description": "State management wthout redux",
+  "version": "0.1.1-beta",
+  "description": "The combination of React and RxJS, that makes state management easier.",
   "main": "lib/index.js",
   "files": [
     "lib",
@@ -24,6 +24,7 @@
   },
   "keywords": [
     "react",
+    "react+rx",
     "rx",
     "reactivex",
     "state management",

@@ -58,10 +58,10 @@ ReactDOM.render(<App />, rootElement)
 #### Root (Master store)
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-retix';
+import { useSubscriber } from 'react-retix';
 
 const App = () => {
-  const masterStore = useSubsriber();
+  const masterStore = useSubscriber();
 
   return <></>
 };
@@ -70,10 +70,10 @@ const App = () => {
 #### Children
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-retix';
+import { useSubscriber } from 'react-retix';
 
 const LoadingIndicator = () => {
-  const isLoading = useSubsriber('page.isLoading');
+  const isLoading = useSubscriber('page.isLoading');
 
   return isLoading && <Spinner />
 };
@@ -83,11 +83,11 @@ const LoadingIndicator = () => {
 #### Inside component
 ```jsx
 import React from 'react';
-import { useSubsriber } from 'react-retix';
+import { useSubscriber } from 'react-retix';
 
 const PostReaction = (post) => {
 
-  const { isAuthenticated } = useSubsriber('user');
+  const { isAuthenticated } = useSubscriber('user');
 
   const doLike = () => {
     useEmitter({ isLiked: true });
