@@ -53,6 +53,9 @@ const Header = () => {
                   <a className="nav-link" target="_blank" href="https://github.com/vixnguyen/react-rx">Reposistory</a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link" target="_blank" href="https://www.npmjs.com/package/react-retix">Package</a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link" target="_blank" href="https://medium.com/@vixnguyen">Author</a>
                 </li>
               </ul>
