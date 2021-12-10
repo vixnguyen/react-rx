@@ -13,7 +13,7 @@
 This package is used for state management, it is not intended to become an alternative to Redux. It just provides a different approach to state management in React.
 
 
-If you're looking for a simple, flexible, effective way to manage the global state of your React application, this package is for you. If you're new to Redux, you're confused with a lot of its concepts such as the `store`, `reducer`, `action`, `middleware` - Alright, go ahead with React Rx.
+If you're looking for a simple, flexible, effective way to manage the global state of your React application, this package is for you. If you're new to Redux, you're confused with a lot of its concepts such as the `store`, `reducer`, `action`, `middleware` - Alright, go ahead with React RetiX.
 
 
 Let's take a look at the detail below:
@@ -96,7 +96,7 @@ const PostReaction = (post) => {
   return (
     <div>
       { 
-        isAuthenticated ? <button onClick={onLike}>Like</button> : <button>Sign in</button>
+        isAuthenticated ? <button onClick={doLike}>Like</button> : <button>Sign in</button>
       }
     </div>
   )

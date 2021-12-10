@@ -9,7 +9,7 @@ class PageService {
     // dummy data
     const data = [
       {
-        name: 'React Rx',
+        name: 'React RetiX',
         isLiked: false,
         isFeatured: false
       },
