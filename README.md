@@ -19,10 +19,10 @@ If you're looking for a simple, flexible, effective way to manage the global sta
 Let's take a look at the detail below:
 
 ## Competitive benefits:
+- Can use any where in your react application, not only in component
 - Light-weight
 - Easy to use
 - Simple of architecture
-- Can use any where in your react application, not only in component
 
 ## Install
 ```
